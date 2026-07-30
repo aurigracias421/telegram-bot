@@ -1,6 +1,6 @@
 import os,json,time,uuid,logging,asyncio,hashlib,requests
 from telegram import Update,InlineKeyboardButton,InlineKeyboardMarkup
-from telegram.ext import Application,CommandHandler,MessageHandler,CallbackQueryHandler,filters,ContextTypes
+from telegram.ext import Application, CommandHandler,MessageHandler,CallbackQueryHandler,filters,ContextTypes
 
 logging.basicConfig(level=logging.INFO,format="%(asctime)s [%(levelname)s] %(message)s",datefmt="%H:%M:%S")
 log=logging.getLogger("Bot")
@@ -95,4 +95,8 @@ class Bot:
     async def clear(self,u,c):self.results=[];await self.reply(u,"Resultados limpiados.")
     def run(self):log.info("Bot iniciado correctamente!");self.app.run_polling(allowed_updates=Update.ALL_TYPES)
 
-Bot("8712734174:AAFgZap928sm1LVxeyTN4uEGLiQ0-kmZAHk").run()
+TOKEN = os.getenv("BOT_TOKEN")
+
+
+
+Bot(8712734174:AAFK3x1KWy7akKT0ru2uulIQILU_dbLawMw).run()
