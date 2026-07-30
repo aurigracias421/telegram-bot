@@ -93,10 +93,8 @@ class Bot:
         elif r.get("refund")==False:refund=" | Reembolso fallo"
         await msg.edit_text(f"{estado} - Stripe{refund}\nBIN: {card.bin} ({card.brand})\nStatus: {r.get('status') or str(r.get('err','?'))[:60]}\nTX: {r.get('tx','N/A')}\n{'' if not r.get('refund_id') else 'Refund: '+r['refund_id']}\nTiempo: {r.get('ms',0):.0f}ms")
     async def clear(self,u,c):self.results=[];await self.reply(u,"Resultados limpiados.")
-    def run(self):log.info("Bot iniciado correctamente!");self.app.run_polling(allowed_updates=Update.ALL_TYPES)
+   def run(self):log.info("Bot iniciado correctamente!");self.app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 TOKEN = os.getenv("BOT_TOKEN")
 
-
-
-Bot(8712734174:AAFK3x1KWy7akKT0ru2uulIQILU_dbLawMw).run()
+Bot(TOKEN).run()
