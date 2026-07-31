@@ -95,7 +95,6 @@ class Bot:
            async def clear(self,u,c):
         self.results=[]
         await self.reply(u,"Resultados limpiados.")
-
     def run(self):
         log.info("Bot iniciado correctamente!")
         self.app.run_polling(allowed_updates=Update.ALL_TYPES)
