@@ -97,9 +97,7 @@ class Bot:
         await self.reply(u,"Resultados limpiados.")
     def run(self):
         log.info("Bot iniciado correctamente!")
-        self.app.run_polling(allowed_updates=Update.ALL_TYPES)
-
-
-TOKEN = os.getenv("BOT_TOKEN")
+         self.app.run_polling(allowed_updates=Update.ALL_TYPES)                                                                                                                                                                     
+      TOKEN = os.getenv("BOT_TOKEN")
 
 Bot(TOKEN).run()
